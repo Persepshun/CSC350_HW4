@@ -17,8 +17,10 @@ CREATE TABLE Sets (
     description TEXT,
     theme_id INT,
     piece_count INT,
+    item_id INT,
     image_url VARCHAR(255),
     owner_id INT,
+    added_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (theme_id) REFERENCES Themes(theme_id),
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
